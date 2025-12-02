@@ -10,15 +10,23 @@ export function WhatIsThis() {
         
         <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
           <p>
-            A <strong>3-day live immersive experience</strong> where CEOs, operators, and builders learn to weaponize AI and install brutal clarity into their execution systems.
+            <strong>A 3-day in-person intensive.</strong> Not a retreat. Not a workshop. An installation of a complete operating system designed for operators who are tired of leaving 70% of their potential on the table.
           </p>
-          
+
           <p>
-            You'll learn from someone who runs multiple 7-figure operations using nothing but Claude, GPT, Supabase, and pure systems thinking. No theory. Only real-world domination tactics.
+            You'll learn directly from someone who builds 7-figure businesses using Claude, GPT, Supabase, and absolutely no fluff. Every tactic is from real operations. Every framework has been battle-tested. You get access to the exact systems, templates, and decision-trees that work.
           </p>
-          
+
           <p>
-            By day 3, you'll have a complete personal operating system, weaponized AI workflows, and a 90-day execution plan that turns chaos into clarity.
+            <strong>Day 1:</strong> Install brutal clarity into your thinking. Build your personal OS and AI workflows.
+            <br/>
+            <strong>Day 2:</strong> Live building. Code, design, strategy in real-time. See how fast is actually possible.
+            <br/>
+            <strong>Day 3:</strong> Your 90-day execution roadmap. The exact path from chaos to domination.
+          </p>
+
+          <p>
+            By the end, you won't just have templates. You'll be a different operator—one with clarity, speed, and the systems to back it up.
           </p>
         </div>
       </div>

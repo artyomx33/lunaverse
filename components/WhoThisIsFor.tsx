@@ -4,18 +4,18 @@ export function WhoThisIsFor() {
   const avatars = [
     {
       icon: "👑",
-      title: "CEOs Tired of Slow Execution",
-      desc: "Running operations at 30% of your potential. Ready to 10x.",
+      title: "CEOs Bleeding Execution Time",
+      desc: "You're handling 10 things a CEO shouldn't handle. 3 days to delegate those to systems. Watch your calendar change.",
     },
     {
       icon: "⚙️",
-      title: "Operators Drowning in Tools",
-      desc: "ChatGPT, Notion, Slack, spreadsheets... chaos. Need ONE system.",
+      title: "Operators with Tool Fatigue",
+      desc: "ChatGPT here, Notion there, Slack everywhere, spreadsheets in the corner. This ends. One OS. One place. Everything connected.",
     },
     {
       icon: "🚀",
-      title: "Builders Who Want AI Superpowers",
-      desc: "Build faster, smarter, meaner. AI as co-founder, not toy.",
+      title: "Builders Ready to Accelerate",
+      desc: "You can code. You can ship. Now you need to think like a systems architect. That's what this is for.",
     },
   ];
 

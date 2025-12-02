@@ -23,27 +23,28 @@ export function HeroSection() {
         </h1>
 
         {/* Subheading */}
-        <p className="text-xl md:text-2xl text-gray-400 mb-4 leading-relaxed">
-          3 days. €4998. Beast Mode activated.
+        <p className="text-xl md:text-2xl text-gray-300 mb-6 leading-relaxed">
+          Most operators are drowning. You're not most operators.
         </p>
 
         {/* Description */}
-        <p className="text-lg text-gray-500 mb-8 leading-relaxed">
-          AI weaponization. Brutal clarity. Real-world domination OS.
+        <p className="text-lg text-gray-400 mb-8 leading-relaxed max-w-2xl mx-auto">
+          You need a different operating system—one designed by someone who runs 7-figure businesses using nothing but Claude, GPT, brutal clarity, and ruthless execution. 3 days to install it. Limited to 6 people per cohort.
         </p>
 
         {/* CTA Button */}
         <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
           <Button variant="primary" className="text-lg px-8 py-4">
-            Join Beta Cohort
+            Apply Now (€4,998)
           </Button>
         </div>
 
         {/* Microcopy */}
-        <p className="text-sm text-gray-600 italic">
-          If €4998 feels like a lot, you're not ready.
-          <br />
-          If it doesn't, we are.
+        <p className="text-sm text-yellow-400 font-semibold mb-4">
+          If this price feels like a lot, you're not ready.
+        </p>
+        <p className="text-xs text-gray-600 italic">
+          If it doesn't, we'll review your application within 48 hours.
         </p>
       </div>
     </section>
