@@ -23,10 +23,7 @@ export function Navigation() {
         </button>
 
         <div className="hidden md:flex gap-8 items-center">
-          <a href="#what-is-this" className="text-gray-300 hover:text-yellow-400 transition">
-            What is This
-          </a>
-          <a href="#breakdown" className="text-gray-300 hover:text-yellow-400 transition">
+          <a href="#3-days" className="text-gray-300 hover:text-yellow-400 transition">
             3 Days
           </a>
           <a href="#pricing" className="text-gray-300 hover:text-yellow-400 transition">
@@ -35,18 +32,15 @@ export function Navigation() {
           <a href="#faq" className="text-gray-300 hover:text-yellow-400 transition">
             FAQ
           </a>
-          <button className="bg-yellow-400 text-black px-6 py-2 rounded-lg font-semibold hover:bg-yellow-300 transition">
+          <a href="#apply" className="bg-yellow-400 text-black px-6 py-2 rounded-lg font-semibold hover:bg-yellow-300 transition">
             Apply
-          </button>
+          </a>
         </div>
 
         {mobileMenuOpen && (
           <div className="absolute top-full left-0 right-0 bg-black border-b border-gray-800 md:hidden">
             <div className="px-4 py-4 space-y-4">
-              <a href="#what-is-this" className="block text-gray-300 hover:text-yellow-400 transition">
-                What is This
-              </a>
-              <a href="#breakdown" className="block text-gray-300 hover:text-yellow-400 transition">
+              <a href="#3-days" className="block text-gray-300 hover:text-yellow-400 transition">
                 3 Days
               </a>
               <a href="#pricing" className="block text-gray-300 hover:text-yellow-400 transition">
@@ -55,9 +49,9 @@ export function Navigation() {
               <a href="#faq" className="block text-gray-300 hover:text-yellow-400 transition">
                 FAQ
               </a>
-              <button className="w-full bg-yellow-400 text-black px-6 py-2 rounded-lg font-semibold hover:bg-yellow-300 transition">
+              <a href="#apply" className="block bg-yellow-400 text-black px-6 py-2 rounded-lg font-semibold hover:bg-yellow-300 transition text-center">
                 Apply
-              </button>
+              </a>
             </div>
           </div>
         )}

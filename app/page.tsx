@@ -15,16 +15,36 @@ export default function Home() {
     <main>
       <Navigation />
       <div className="pt-16">
-        <HeroSection />
-        <IdentityHook />
-        <WhatIsThis />
-        <DayBreakdown />
-        <WhoThisIsFor />
-        <WhatYouLearn />
-        <PricingTiers />
-        <BonusesSection />
-        <FAQSection />
-        <FinalCTA />
+        <section id="hero">
+          <HeroSection />
+        </section>
+        <section id="identity">
+          <IdentityHook />
+        </section>
+        <section id="what-is-this">
+          <WhatIsThis />
+        </section>
+        <section id="3-days">
+          <DayBreakdown />
+        </section>
+        <section id="who">
+          <WhoThisIsFor />
+        </section>
+        <section id="learn">
+          <WhatYouLearn />
+        </section>
+        <section id="pricing">
+          <PricingTiers />
+        </section>
+        <section id="bonuses">
+          <BonusesSection />
+        </section>
+        <section id="faq">
+          <FAQSection />
+        </section>
+        <section id="apply">
+          <FinalCTA />
+        </section>
       </div>
     </main>
   );
