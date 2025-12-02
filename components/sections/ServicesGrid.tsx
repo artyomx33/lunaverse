@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
+import { GlowCard } from "@/lib/glow-effect-kit";
 import { services } from "@/lib/content/home";
 import { WrenchIcon, SparkleIcon, FlagIcon, ChevronRightIcon } from "@/components/ui/Icons";
 
@@ -41,23 +42,25 @@ export function ServicesGrid() {
                 ease: "easeOut",
               }}
             >
-              <Link href={service.link.href} className="block h-full">
-                <div className="card-service h-full flex flex-col">
-                  <div className="mb-4">
-                    {iconMap[service.icon]}
+              <GlowCard variant="ocean" spread={20} innerClassName="bg-white text-gray-900 h-full">
+                <Link href={service.link.href} className="block h-full">
+                  <div className="h-full flex flex-col">
+                    <div className="mb-4">
+                      {iconMap[service.icon]}
+                    </div>
+                    <h3 className="text-xl font-semibold text-black mb-2">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600 mb-4 flex-grow">
+                      {service.description}
+                    </p>
+                    <span className="inline-flex items-center gap-1 text-teddy font-medium text-sm group">
+                      {service.link.label}
+                      <ChevronRightIcon size={16} className="transition-transform group-hover:translate-x-1" />
+                    </span>
                   </div>
-                  <h3 className="text-xl font-semibold text-black mb-2">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4 flex-grow">
-                    {service.description}
-                  </p>
-                  <span className="inline-flex items-center gap-1 text-teddy font-medium text-sm group">
-                    {service.link.label}
-                    <ChevronRightIcon size={16} className="transition-transform group-hover:translate-x-1" />
-                  </span>
-                </div>
-              </Link>
+                </Link>
+              </GlowCard>
             </motion.div>
           ))}
         </div>

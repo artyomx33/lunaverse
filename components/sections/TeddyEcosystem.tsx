@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { GlowCard } from "@/lib/glow-effect-kit";
 import { aboutPage } from "@/lib/content/about";
 import { WrenchIcon } from "@/components/ui/Icons";
 
@@ -104,17 +105,24 @@ export function TeddyEcosystem() {
                 delay: index * 0.1,
                 ease: "easeOut",
               }}
-              className={`p-6 rounded-xl text-center ${
-                brand.name === "TeddyFix"
-                  ? "bg-teddy/20 ring-2 ring-teddy"
-                  : "bg-white/5"
-              }`}
             >
-              <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-white/10 flex items-center justify-center">
-                {iconMap[brand.icon]}
-              </div>
-              <h3 className="font-semibold text-lg mb-1">{brand.name}</h3>
-              <p className="text-gray-400 text-sm">{brand.description}</p>
+              <GlowCard
+                variant={brand.name === "TeddyFix" ? "teddy" : "sunset"}
+                spread={brand.name === "TeddyFix" ? 25 : 20}
+                innerClassName={
+                  brand.name === "TeddyFix"
+                    ? "bg-teddy/20 text-white"
+                    : "bg-white/5 text-white"
+                }
+              >
+                <div className="text-center p-6">
+                  <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-white/10 flex items-center justify-center">
+                    {iconMap[brand.icon]}
+                  </div>
+                  <h3 className="font-semibold text-lg mb-1">{brand.name}</h3>
+                  <p className="text-gray-400 text-sm">{brand.description}</p>
+                </div>
+              </GlowCard>
             </motion.div>
           ))}
         </div>

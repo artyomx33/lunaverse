@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/Button";
+import { GlowCard } from "@/lib/glow-effect-kit";
 
 export function PricingTiers() {
   const tiers = [
@@ -66,13 +67,15 @@ export function PricingTiers() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {tiers.map((tier, idx) => (
-            <div
+            <GlowCard
               key={idx}
-              className={`rounded-xl border transition ${
+              variant={tier.highlighted ? "teddy" : "ocean"}
+              spread={tier.highlighted ? 30 : 20}
+              innerClassName={
                 tier.highlighted
-                  ? "border-yellow-400 bg-black text-white ring-2 ring-yellow-400 scale-105"
-                  : "border-gray-200 bg-gray-50"
-              }`}
+                  ? "bg-black text-white"
+                  : "bg-gray-50 text-gray-900"
+              }
             >
               <div
                 className={`p-8 ${
@@ -143,7 +146,7 @@ export function PricingTiers() {
                   ))}
                 </ul>
               </div>
-            </div>
+            </GlowCard>
           ))}
         </div>
 

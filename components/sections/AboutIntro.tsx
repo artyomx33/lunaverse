@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { GlowCard } from "@/lib/glow-effect-kit";
 import { aboutPage } from "@/lib/content/about";
 
 export function AboutIntro() {
@@ -30,14 +31,18 @@ export function AboutIntro() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-            className="mt-12 bg-white rounded-xl p-8 border-l-4 border-teddy"
+            className="mt-12"
           >
-            <blockquote className="text-xl text-gray-800 italic mb-4">
-              &ldquo;{aboutPage.intro.quote.text}&rdquo;
-            </blockquote>
-            <p className="text-teddy font-semibold">
-              — {aboutPage.intro.quote.author}
-            </p>
+            <GlowCard variant="teddy" spread={25} innerClassName="bg-white text-gray-800">
+              <div className="p-8">
+                <blockquote className="text-xl text-gray-800 italic mb-4">
+                  &ldquo;{aboutPage.intro.quote.text}&rdquo;
+                </blockquote>
+                <p className="text-teddy font-semibold">
+                  — {aboutPage.intro.quote.author}
+                </p>
+              </div>
+            </GlowCard>
           </motion.div>
         </div>
       </div>
