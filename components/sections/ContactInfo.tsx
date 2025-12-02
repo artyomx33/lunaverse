@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { GlowCard } from "@/lib/glow-effect-kit";
 import { contactPage } from "@/lib/content/contact";
 import { MapPinIcon, PhoneIcon } from "@/components/ui/Icons";
 
@@ -188,26 +189,29 @@ export function ContactInfo() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="bg-gray-50 rounded-xl p-6 border border-gray-200"
             >
-              <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 rounded-full bg-teddy flex items-center justify-center">
-                  <CameraIcon size={20} className="text-white" />
+              <GlowCard variant="sunset" spread={20} innerClassName="bg-gray-50 text-gray-700">
+                <div className="p-6">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 rounded-full bg-teddy flex items-center justify-center">
+                      <CameraIcon size={20} className="text-white" />
+                    </div>
+                    <h3 className="font-semibold text-black">
+                      {contactPage.quickContact.photoCta.label}
+                    </h3>
+                  </div>
+                  <p className="text-gray-600 text-sm mb-4">
+                    {contactPage.quickContact.photoCta.description}
+                  </p>
+                  <a
+                    href={contactPage.quickContact.whatsappCta.href}
+                    className="button-primary inline-flex items-center gap-2 bg-teddy hover:bg-teddy/90"
+                  >
+                    <MessageCircleIcon size={18} />
+                    {contactPage.quickContact.whatsappCta.label}
+                  </a>
                 </div>
-                <h3 className="font-semibold text-black">
-                  {contactPage.quickContact.photoCta.label}
-                </h3>
-              </div>
-              <p className="text-gray-600 text-sm mb-4">
-                {contactPage.quickContact.photoCta.description}
-              </p>
-              <a
-                href={contactPage.quickContact.whatsappCta.href}
-                className="button-primary inline-flex items-center gap-2 bg-teddy hover:bg-teddy/90"
-              >
-                <MessageCircleIcon size={18} />
-                {contactPage.quickContact.whatsappCta.label}
-              </a>
+              </GlowCard>
             </motion.div>
           </motion.div>
 

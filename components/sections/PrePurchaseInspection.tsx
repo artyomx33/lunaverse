@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { GlowCard } from "@/lib/glow-effect-kit";
 import { Button } from "@/components/ui/Button";
 import { prePurchaseInspection } from "@/lib/content/services";
 import { WrenchIcon } from "@/components/ui/Icons";
@@ -111,13 +112,16 @@ export function PrePurchaseInspection() {
                 delay: index * 0.1,
                 ease: "easeOut",
               }}
-              className="bg-white/5 rounded-xl p-6 border border-white/10"
             >
-              <div className="w-10 h-10 rounded-lg bg-teddy/20 flex items-center justify-center mb-4">
-                {featureIcons[feature.icon]}
-              </div>
-              <h3 className="font-semibold text-white mb-2">{feature.title}</h3>
-              <p className="text-gray-400 text-sm">{feature.description}</p>
+              <GlowCard variant="ocean" spread={20} innerClassName="bg-white/5 text-white">
+                <div className="p-6">
+                  <div className="w-10 h-10 rounded-lg bg-teddy/20 flex items-center justify-center mb-4">
+                    {featureIcons[feature.icon]}
+                  </div>
+                  <h3 className="font-semibold text-white mb-2">{feature.title}</h3>
+                  <p className="text-gray-400 text-sm">{feature.description}</p>
+                </div>
+              </GlowCard>
             </motion.div>
           ))}
         </div>
@@ -146,27 +150,30 @@ export function PrePurchaseInspection() {
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
             transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
-            className="bg-white/5 rounded-xl p-6 border border-teddy/30"
           >
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-14 h-14 rounded-full bg-teddy/20 flex items-center justify-center">
-                <svg className="w-7 h-7 text-teddy" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                </svg>
+            <GlowCard variant="sunset" spread={25} innerClassName="bg-white/5 text-white">
+              <div className="p-6">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-14 h-14 rounded-full bg-teddy/20 flex items-center justify-center">
+                    <svg className="w-7 h-7 text-teddy" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-white">{prePurchaseInspection.expert.name}</p>
+                    <p className="text-teddy text-sm">{prePurchaseInspection.expert.title}</p>
+                  </div>
+                </div>
+                <p className="text-gray-400 text-sm mb-6">{prePurchaseInspection.expert.note}</p>
+                <Button
+                  href={prePurchaseInspection.cta.href}
+                  variant="primary"
+                  className="w-full bg-teddy hover:bg-teddy/90"
+                >
+                  {prePurchaseInspection.cta.label}
+                </Button>
               </div>
-              <div>
-                <p className="font-semibold text-white">{prePurchaseInspection.expert.name}</p>
-                <p className="text-teddy text-sm">{prePurchaseInspection.expert.title}</p>
-              </div>
-            </div>
-            <p className="text-gray-400 text-sm mb-6">{prePurchaseInspection.expert.note}</p>
-            <Button
-              href={prePurchaseInspection.cta.href}
-              variant="primary"
-              className="w-full bg-teddy hover:bg-teddy/90"
-            >
-              {prePurchaseInspection.cta.label}
-            </Button>
+            </GlowCard>
           </motion.div>
         </div>
       </div>
