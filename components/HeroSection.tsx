@@ -12,19 +12,19 @@ export function HeroSection() {
           src="/images/hero-banner.webp"
           alt="Luna-Verse OS Hero Banner"
           fill
-          className="object-cover opacity-60"
+          className="object-cover opacity-88"
           priority
         />
       </div>
 
-      {/* Gradient overlay - reduced opacity to let image show more */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-black to-gray-900 opacity-70" />
+      {/* Gradient overlay - minimal to let image shine */}
+      <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/40 to-gray-900/50" />
 
       {/* Glowing accent */}
       <div className="absolute top-20 right-10 w-96 h-96 bg-blue-500 rounded-full blur-3xl opacity-10" />
 
-      {/* Content */}
-      <div className="relative z-10 max-w-3xl mx-auto px-4 md:px-8 text-center h-full flex flex-col justify-center">
+      {/* Content - positioned lower to show image */}
+      <div className="relative z-10 max-w-3xl mx-auto px-4 md:px-8 text-center h-full flex flex-col justify-center items-center pt-20">
         {/* Main Headline */}
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
           Out-Execute
