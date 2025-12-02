@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export function WhatYouLearn() {
   const outcomes = [
     {
@@ -31,10 +33,23 @@ export function WhatYouLearn() {
   return (
     <section className="bg-white py-20 md:py-32 px-4 md:px-8">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-black mb-16 text-center">
+        <h2 className="text-4xl md:text-5xl font-bold text-black mb-12 text-center">
           What You'll Learn
         </h2>
-        
+
+        {/* Value Stack Visual */}
+        <div className="mb-16 rounded-xl overflow-hidden border border-gray-200 shadow-lg">
+          <Image
+            src="/images/value-stack.webp"
+            alt="Value Stack - What You Get from Luna-Verse OS"
+            width={1200}
+            height={700}
+            className="w-full h-auto"
+            quality={85}
+          />
+        </div>
+
+        {/* Learning Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {outcomes.map((outcome, idx) => (
             <div key={idx} className="bg-gray-50 p-8 rounded-lg border-l-4 border-blue-500">

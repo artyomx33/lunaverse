@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
@@ -94,11 +95,28 @@ export function SocialProofSection() {
           ))}
         </div>
 
-        {/* Background & Tools */}
+        {/* Before/After Proof */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+          className="mb-16 rounded-xl overflow-hidden border border-gray-200"
+        >
+          <Image
+            src="/images/before-after-proof.webp"
+            alt="Before Luna OS vs After Luna OS - Proof of Execution"
+            width={1200}
+            height={600}
+            className="w-full h-auto"
+            quality={85}
+          />
+        </motion.div>
+
+        {/* Background & Tools */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
           className="bg-white rounded-xl p-8 md:p-12 border border-gray-200 mb-16"
         >
           <h3 className="text-2xl font-bold text-black mb-4">
@@ -143,7 +161,7 @@ export function SocialProofSection() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
+          transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
         >
           <h3 className="text-2xl font-bold text-black mb-8 text-center">
             What They Say

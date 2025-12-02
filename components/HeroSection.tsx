@@ -1,13 +1,25 @@
 "use client";
 
+import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 
 export function HeroSection() {
   return (
     <section className="min-h-screen bg-black text-white flex items-center justify-center relative overflow-hidden">
-      {/* Background gradient */}
+      {/* Background with hero image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/hero-banner.webp"
+          alt="Luna-Verse OS Hero Banner"
+          fill
+          className="object-cover opacity-40"
+          priority
+        />
+      </div>
+
+      {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-black via-black to-gray-900 opacity-90" />
-      
+
       {/* Glowing accent */}
       <div className="absolute top-20 right-10 w-96 h-96 bg-blue-500 rounded-full blur-3xl opacity-10" />
 
