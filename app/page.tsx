@@ -8,6 +8,7 @@ import { WhatYouLearn } from "@/components/WhatYouLearn";
 import { PricingTiers } from "@/components/PricingTiers";
 import { BonusesSection } from "@/components/BonusesSection";
 import { FAQSection } from "@/components/FAQSection";
+import { WaitlistCTA } from "@/components/WaitlistCTA";
 import { FinalCTA } from "@/components/FinalCTA";
 
 export default function Home() {
@@ -41,6 +42,9 @@ export default function Home() {
         </section>
         <section id="faq">
           <FAQSection />
+        </section>
+        <section id="waitlist">
+          <WaitlistCTA />
         </section>
         <section id="apply">
           <FinalCTA />

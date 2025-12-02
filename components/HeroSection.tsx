@@ -12,7 +12,7 @@ export function HeroSection() {
       <div className="absolute top-20 right-10 w-96 h-96 bg-blue-500 rounded-full blur-3xl opacity-10" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-3xl mx-auto px-4 md:px-8 text-center">
+      <div className="relative z-10 max-w-3xl mx-auto px-4 md:px-8 text-center h-full flex flex-col justify-center">
         {/* Main Headline */}
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
           Out-Execute
@@ -46,6 +46,24 @@ export function HeroSection() {
         <p className="text-xs text-gray-600 italic">
           If it doesn't, we'll review your application within 48 hours.
         </p>
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10 text-center">
+        <svg
+          className="w-6 h-6 text-yellow-400 mx-auto"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={2}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M19 14l-7 7m0 0l-7-7m7 7V3"
+          />
+        </svg>
+        <p className="text-xs text-gray-500 mt-2">Scroll to explore</p>
       </div>
     </section>
   );
