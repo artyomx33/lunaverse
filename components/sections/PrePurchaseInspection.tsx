@@ -113,7 +113,7 @@ export function PrePurchaseInspection() {
                 ease: "easeOut",
               }}
             >
-              <GlowCard variant="ocean" spread={20} innerClassName="bg-white/5 text-white">
+              <GlowCard variant="sunset" spread={20} innerClassName="bg-white/5 text-white">
                 <div className="p-6">
                   <div className="w-10 h-10 rounded-lg bg-teddy/20 flex items-center justify-center mb-4">
                     {featureIcons[feature.icon]}
