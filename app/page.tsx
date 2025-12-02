@@ -4,8 +4,10 @@ import { IdentityHook } from "@/components/IdentityHook";
 import { WhatIsThis } from "@/components/WhatIsThis";
 import { DayBreakdown } from "@/components/DayBreakdown";
 import { WhoThisIsFor } from "@/components/WhoThisIsFor";
+import { SocialProofSection } from "@/components/SocialProofSection";
 import { WhatYouLearn } from "@/components/WhatYouLearn";
 import { PricingTiers } from "@/components/PricingTiers";
+import { SelectionCriteria } from "@/components/SelectionCriteria";
 import { BonusesSection } from "@/components/BonusesSection";
 import { FAQSection } from "@/components/FAQSection";
 import { WaitlistCTA } from "@/components/WaitlistCTA";
@@ -31,11 +33,17 @@ export default function Home() {
         <section id="who">
           <WhoThisIsFor />
         </section>
+        <section id="proof">
+          <SocialProofSection />
+        </section>
         <section id="learn">
           <WhatYouLearn />
         </section>
         <section id="pricing">
           <PricingTiers />
+        </section>
+        <section id="selection">
+          <SelectionCriteria />
         </section>
         <section id="bonuses">
           <BonusesSection />
