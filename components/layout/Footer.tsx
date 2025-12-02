@@ -1,111 +1,91 @@
-import Link from "next/link";
-import { PhoneIcon, MapPinIcon } from "@/components/ui/Icons";
-
-const navigation = [
-  { name: "Home", href: "/" },
-  { name: "Services", href: "/services" },
-  { name: "Fleet & Taxi", href: "/fleet-taxi" },
-  { name: "About", href: "/about" },
-  { name: "Contact", href: "/contact" },
-];
-
 export function Footer() {
   return (
-    <footer className="bg-black text-white">
-      <div className="max-w-6xl mx-auto px-4 lg:px-8 py-12 lg:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+    <footer className="bg-black text-white border-t border-gray-800">
+      <div className="max-w-6xl mx-auto px-4 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
-          <div className="lg:col-span-1">
-            <Link href="/" className="inline-block mb-4">
-              <span className="text-2xl font-bold">
-                Teddy<span className="text-teddy">Fix</span>
+          <div>
+            <div className="flex items-center gap-2 mb-4">
+              <span className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500">
+                ⚡
               </span>
-            </Link>
+              <span className="text-2xl font-bold">Luna-Verse OS</span>
+            </div>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Premium auto repair and fleet services in Leiden. Trusted by
-              families and professionals.
+              A 3-day master experience for operators ready to escape the chaos and build real empires.
+            </p>
+            <p className="text-yellow-400 font-semibold mt-4 text-sm">
+              Limited to 6 people per cohort.
             </p>
           </div>
 
-          {/* Navigation */}
+          {/* Quick Links */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider mb-4">
-              Navigation
-            </h3>
-            <ul className="space-y-3">
-              {navigation.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-gray-400 hover:text-white transition-colors text-sm"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider mb-4">
-              Services
+            <h3 className="text-sm font-semibold uppercase tracking-wider mb-4 text-yellow-300">
+              Quick Links
             </h3>
             <ul className="space-y-3">
               <li>
-                <Link
-                  href="/services#maintenance"
-                  className="text-gray-400 hover:text-white transition-colors text-sm"
+                <a
+                  href="#3-days"
+                  className="text-gray-400 hover:text-yellow-400 transition-colors text-sm"
                 >
-                  Maintenance & Repair
-                </Link>
+                  3-Day Breakdown
+                </a>
               </li>
               <li>
-                <Link
-                  href="/services#detailing"
-                  className="text-gray-400 hover:text-white transition-colors text-sm"
+                <a
+                  href="#pricing"
+                  className="text-gray-400 hover:text-yellow-400 transition-colors text-sm"
                 >
-                  Detailing & Ceramic
-                </Link>
+                  Pricing & Tiers
+                </a>
               </li>
               <li>
-                <Link
-                  href="/services#tuning"
-                  className="text-gray-400 hover:text-white transition-colors text-sm"
+                <a
+                  href="#faq"
+                  className="text-gray-400 hover:text-yellow-400 transition-colors text-sm"
                 >
-                  Performance & Tuning
-                </Link>
+                  FAQs
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#apply"
+                  className="text-gray-400 hover:text-yellow-400 transition-colors text-sm font-medium"
+                >
+                  Apply Now
+                </a>
               </li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider mb-4">
-              Contact
+            <h3 className="text-sm font-semibold uppercase tracking-wider mb-4 text-yellow-300">
+              Get In Touch
             </h3>
             <ul className="space-y-3">
-              <li className="flex items-start gap-3">
-                <MapPinIcon size={18} className="text-teddy flex-shrink-0 mt-0.5" />
-                <span className="text-gray-400 text-sm">
-                  Leiden, Netherlands
-                </span>
-              </li>
-              <li className="flex items-center gap-3">
-                <PhoneIcon size={18} className="text-teddy flex-shrink-0" />
+              <li>
+                <p className="text-gray-400 text-sm">
+                  Questions about the cohort?
+                </p>
                 <a
-                  href="tel:+31612345678"
-                  className="text-gray-400 hover:text-white transition-colors text-sm"
+                  href="mailto:contact@lunaverse.com"
+                  className="text-yellow-400 hover:text-yellow-300 transition-colors text-sm font-medium mt-1 block"
                 >
-                  +31 6 1234 5678
+                  contact@lunaverse.com
                 </a>
               </li>
               <li>
+                <p className="text-gray-400 text-sm mt-4">
+                  Ready to apply?
+                </p>
                 <a
-                  href="https://wa.me/31612345678"
-                  className="inline-flex items-center gap-2 text-teddy hover:text-white transition-colors text-sm font-medium mt-2"
+                  href="#apply"
+                  className="inline-flex items-center gap-2 text-yellow-400 hover:text-yellow-300 transition-colors text-sm font-medium mt-1"
                 >
-                  WhatsApp Us
+                  Submit your application
                 </a>
               </li>
             </ul>
@@ -113,21 +93,12 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-500 text-sm">
-            &copy; {new Date().getFullYear()} TeddyFix. All rights reserved.
+        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+          <p>
+            &copy; {new Date().getFullYear()} Luna-Verse OS. All rights reserved.
           </p>
-          <p className="text-gray-500 text-sm">
-            Part of the{" "}
-            <a
-              href="https://teddykids.nl"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-teddy hover:text-white transition-colors"
-            >
-              TeddyKids
-            </a>{" "}
-            family
+          <p>
+            Built for operators who refuse to play small.
           </p>
         </div>
       </div>
