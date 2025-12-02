@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
@@ -102,13 +101,10 @@ export function SocialProofSection() {
           transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
           className="mb-16 rounded-xl overflow-hidden border border-gray-200"
         >
-          <Image
+          <img
             src="/images/before-after-proof.webp"
             alt="Before Luna OS vs After Luna OS - Proof of Execution"
-            width={1200}
-            height={600}
             className="w-full h-auto"
-            quality={85}
           />
         </motion.div>
 

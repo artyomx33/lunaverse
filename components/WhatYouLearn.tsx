@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-
 export function WhatYouLearn() {
   const outcomes = [
     {
@@ -39,13 +37,10 @@ export function WhatYouLearn() {
 
         {/* Value Stack Visual */}
         <div className="mb-16 rounded-xl overflow-hidden border border-gray-200 shadow-lg">
-          <Image
+          <img
             src="/images/value-stack.webp"
             alt="Value Stack - What You Get from Luna-Verse OS"
-            width={1200}
-            height={700}
             className="w-full h-auto"
-            quality={85}
           />
         </div>
 
