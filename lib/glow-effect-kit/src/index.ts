@@ -4,6 +4,7 @@ export type { ColorHoverEffectProps } from "./core/color-hover-effect";
 
 // Component exports
 export { GlowCard } from "./components/glow-card";
+export { GlowStyledCard } from "./components/glow-styled-card";
 export { GlowButton } from "./components/glow-button";
 
 // Utility exports
