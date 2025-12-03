@@ -1,6 +1,6 @@
 "use client";
 
-import { GlowCard } from "@/lib/glow-effect-kit";
+import { GlowStyledCard } from "@/lib/glow-effect-kit";
 
 export function WhoThisIsFor() {
   const avatars = [
@@ -30,13 +30,13 @@ export function WhoThisIsFor() {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {avatars.map((avatar, idx) => (
-            <GlowCard key={idx} variant="ocean" spread={20} innerClassName="bg-white text-gray-700">
-              <div className="p-8 rounded-lg border border-gray-200 hover:border-blue-400 transition">
+            <GlowStyledCard key={idx} variant="ocean" spread={20}>
+              <div className="bg-white p-8 rounded-lg border border-gray-200 hover:border-blue-400 transition">
                 <div className="text-5xl mb-4">{avatar.icon}</div>
                 <h3 className="text-2xl font-bold text-black mb-3">{avatar.title}</h3>
                 <p className="text-gray-600">{avatar.desc}</p>
               </div>
-            </GlowCard>
+            </GlowStyledCard>
           ))}
         </div>
       </div>

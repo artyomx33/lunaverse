@@ -49,12 +49,12 @@ export function WhatYouLearn() {
         {/* Learning Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {outcomes.map((outcome, idx) => (
-            <GlowCard key={idx} variant="ocean" spread={20} innerClassName="bg-gray-50 text-gray-700">
-              <div className="p-8 rounded-lg border-l-4 border-blue-500">
+            <GlowStyledCard key={idx} variant="ocean" spread={20}>
+              <div className="bg-gray-50 p-8 rounded-lg border-l-4 border-blue-500">
                 <h3 className="text-xl font-bold text-black mb-3">{outcome.title}</h3>
                 <p className="text-gray-600">{outcome.desc}</p>
               </div>
-            </GlowCard>
+            </GlowStyledCard>
           ))}
         </div>
       </div>

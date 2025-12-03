@@ -1,6 +1,6 @@
 "use client";
 
-import { GlowCard } from "@/lib/glow-effect-kit";
+import { GlowStyledCard } from "@/lib/glow-effect-kit";
 
 export function DayBreakdown() {
   const days = [
@@ -45,8 +45,8 @@ export function DayBreakdown() {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {days.map((day, idx) => (
-            <GlowCard key={idx} variant="sunset" spread={25} innerClassName="bg-black text-white">
-              <div className="p-8 rounded-xl border-2 border-yellow-400">
+            <GlowStyledCard key={idx} variant="sunset" spread={25}>
+              <div className="bg-black text-white p-8 rounded-xl border-2 border-yellow-400">
                 <p className="text-yellow-400 font-bold text-sm mb-2">{day.day}</p>
                 <h3 className="text-2xl font-bold mb-6">{day.title}</h3>
 
@@ -64,7 +64,7 @@ export function DayBreakdown() {
                   <p className="text-yellow-300 font-semibold">{day.output}</p>
                 </div>
               </div>
-            </GlowCard>
+            </GlowStyledCard>
           ))}
         </div>
       </div>
