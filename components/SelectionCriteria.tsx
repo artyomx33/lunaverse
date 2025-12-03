@@ -60,7 +60,7 @@ export function SelectionCriteria() {
                 delay: idx * 0.1,
                 ease: "easeOut",
               }}
-              className="bg-gray-50 rounded-xl p-8 border border-gray-200 text-center"
+              className="card-glow card-glow-teddy bg-gray-50 rounded-xl p-8 border border-gray-200 text-center"
             >
               <div className="text-5xl mb-4">{item.icon}</div>
               <h3 className="text-xl font-bold text-black mb-3">

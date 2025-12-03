@@ -1,7 +1,5 @@
 "use client";
 
-import { GlowCard } from "@/lib/glow-effect-kit";
-
 export function WhoThisIsFor() {
   const avatars = [
     {
@@ -30,17 +28,14 @@ export function WhoThisIsFor() {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {avatars.map((avatar, idx) => (
-            <GlowCard
+            <div
               key={idx}
-              variant="ocean"
-              spread={20}
-              glowPadding={8}
-              innerClassName="bg-white border border-gray-300 hover:border-blue-400 transition-colors rounded-lg"
+              className="card-glow card-glow-teddy bg-white border border-gray-300 hover:border-blue-400 transition-colors rounded-lg p-8"
             >
               <div className="text-5xl mb-4">{avatar.icon}</div>
               <h3 className="text-2xl font-bold text-black mb-3">{avatar.title}</h3>
               <p className="text-gray-600">{avatar.desc}</p>
-            </GlowCard>
+            </div>
           ))}
         </div>
       </div>

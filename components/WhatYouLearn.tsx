@@ -1,7 +1,5 @@
 "use client";
 
-import { GlowCard } from "@/lib/glow-effect-kit";
-
 export function WhatYouLearn() {
   const outcomes = [
     {
@@ -49,16 +47,13 @@ export function WhatYouLearn() {
         {/* Learning Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {outcomes.map((outcome, idx) => (
-            <GlowCard
+            <div
               key={idx}
-              variant="ocean"
-              spread={20}
-              glowPadding={8}
-              innerClassName="bg-gray-50 border-l-4 border-blue-500 rounded-lg"
+              className="card-glow card-glow-teddy bg-gray-50 border-l-4 border-blue-500 rounded-lg p-6"
             >
               <h3 className="text-xl font-bold text-black mb-3">{outcome.title}</h3>
               <p className="text-gray-600">{outcome.desc}</p>
-            </GlowCard>
+            </div>
           ))}
         </div>
       </div>
