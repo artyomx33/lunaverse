@@ -1,6 +1,6 @@
 "use client";
 
-import { GlowStyledCard } from "@/lib/glow-effect-kit";
+import { GlowCard } from "@/lib/glow-effect-kit";
 
 export function DayBreakdown() {
   const days = [
@@ -45,26 +45,30 @@ export function DayBreakdown() {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {days.map((day, idx) => (
-            <GlowStyledCard key={idx} variant="sunset" spread={25}>
-              <div className="bg-black text-white p-8 rounded-xl border-2 border-yellow-400">
-                <p className="text-yellow-400 font-bold text-sm mb-2">{day.day}</p>
-                <h3 className="text-2xl font-bold mb-6">{day.title}</h3>
+            <GlowCard
+              key={idx}
+              variant="sunset"
+              spread={25}
+              glowPadding={8}
+              innerClassName="bg-black text-white border border-white/30 rounded-lg"
+            >
+              <p className="text-yellow-400 font-bold text-sm mb-2">{day.day}</p>
+              <h3 className="text-2xl font-bold mb-6">{day.title}</h3>
 
-                <ul className="space-y-3 mb-8 text-gray-300">
-                  {day.points.map((point, i) => (
-                    <li key={i} className="flex gap-3">
-                      <span className="text-yellow-400 flex-shrink-0">→</span>
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
+              <ul className="space-y-3 mb-8 text-gray-300">
+                {day.points.map((point, i) => (
+                  <li key={i} className="flex gap-3">
+                    <span className="text-yellow-400 flex-shrink-0">→</span>
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
 
-                <div className="pt-6 border-t border-gray-700">
-                  <p className="text-sm text-gray-500 mb-2">Output:</p>
-                  <p className="text-yellow-300 font-semibold">{day.output}</p>
-                </div>
+              <div className="pt-6 border-t border-gray-700">
+                <p className="text-sm text-gray-500 mb-2">Output:</p>
+                <p className="text-yellow-300 font-semibold">{day.output}</p>
               </div>
-            </GlowStyledCard>
+            </GlowCard>
           ))}
         </div>
       </div>

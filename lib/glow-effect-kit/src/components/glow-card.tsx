@@ -13,6 +13,7 @@ interface GlowCardProps {
   spread?: number;
   proximity?: number;
   inactiveZone?: number;
+  glowPadding?: number;
 }
 
 export const GlowCard = ({
@@ -25,13 +26,15 @@ export const GlowCard = ({
   spread = 20,
   proximity = 0,
   inactiveZone = 0.7,
+  glowPadding = 8,
 }: GlowCardProps) => {
   return (
     <div
       className={cn(
-        "relative h-full w-full rounded-xl border border-white overflow-hidden p-1",
+        "relative h-full w-full rounded-xl border border-white overflow-hidden",
         className
       )}
+      style={{ padding: `${glowPadding}px` }}
     >
       <ColorHoverEffect
         variant={variant}

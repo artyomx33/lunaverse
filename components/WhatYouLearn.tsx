@@ -1,6 +1,6 @@
 "use client";
 
-import { GlowStyledCard } from "@/lib/glow-effect-kit";
+import { GlowCard } from "@/lib/glow-effect-kit";
 
 export function WhatYouLearn() {
   const outcomes = [
@@ -49,12 +49,16 @@ export function WhatYouLearn() {
         {/* Learning Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {outcomes.map((outcome, idx) => (
-            <GlowStyledCard key={idx} variant="ocean" spread={20}>
-              <div className="bg-gray-50 p-8 rounded-lg border-l-4 border-blue-500">
-                <h3 className="text-xl font-bold text-black mb-3">{outcome.title}</h3>
-                <p className="text-gray-600">{outcome.desc}</p>
-              </div>
-            </GlowStyledCard>
+            <GlowCard
+              key={idx}
+              variant="ocean"
+              spread={20}
+              glowPadding={8}
+              innerClassName="bg-gray-50 border-l-4 border-blue-500 rounded-lg"
+            >
+              <h3 className="text-xl font-bold text-black mb-3">{outcome.title}</h3>
+              <p className="text-gray-600">{outcome.desc}</p>
+            </GlowCard>
           ))}
         </div>
       </div>
