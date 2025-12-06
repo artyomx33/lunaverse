@@ -67,7 +67,7 @@ html {
   .card-glow::before {
     content: '';
     @apply absolute pointer-events-none z-0 rounded-[inherit];
-    inset: calc(-1 * var(--glow-border-width));
+    inset: 0;
     border: var(--glow-border-width) solid transparent;
     background: var(--glow-gradient);
     background-attachment: fixed;
